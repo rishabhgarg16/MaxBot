@@ -13,7 +13,7 @@ namespace SDKTemplate
 {
     public partial class App : global::Windows.UI.Xaml.Markup.IXamlMetadataProvider
     {
-    private global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlTypeInfoProvider _provider;
+    private global::SpeechToText.SpeechToText_XamlTypeInfo.XamlTypeInfoProvider _provider;
 
         /// <summary>
         /// GetXamlType(Type)
@@ -22,7 +22,7 @@ namespace SDKTemplate
         {
             if(_provider == null)
             {
-                _provider = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlTypeInfoProvider();
+                _provider = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByType(type);
         }
@@ -34,7 +34,7 @@ namespace SDKTemplate
         {
             if(_provider == null)
             {
-                _provider = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlTypeInfoProvider();
+                _provider = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlTypeInfoProvider();
             }
             return _provider.GetXamlTypeByName(fullName);
         }
@@ -49,7 +49,7 @@ namespace SDKTemplate
     }
 }
 
-namespace SpeechToText.SpeechToTExt_XamlTypeInfo
+namespace SpeechToText.SpeechToText_XamlTypeInfo
 {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -203,8 +203,8 @@ namespace SpeechToText.SpeechToTExt_XamlTypeInfo
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
-            global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlSystemBaseType xamlType = null;
-            global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlUserType userType;
+            global::SpeechToText.SpeechToText_XamlTypeInfo.XamlSystemBaseType xamlType = null;
+            global::SpeechToText.SpeechToText_XamlTypeInfo.XamlUserType userType;
             string typeName = _typeNameTable[typeIndex];
             global::System.Type type = _typeTable[typeIndex];
 
@@ -212,18 +212,18 @@ namespace SpeechToText.SpeechToTExt_XamlTypeInfo
             {
 
             case 0:   //  SDKTemplate.ScenarioBindingConverter
-                userType = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_0_ScenarioBindingConverter;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
 
             case 1:   //  Object
-                xamlType = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 2:   //  SDKTemplate.MainPage
-                userType = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_2_MainPage;
                 userType.AddMemberName("Scenarios");
                 userType.SetIsLocalType();
@@ -231,22 +231,22 @@ namespace SpeechToText.SpeechToTExt_XamlTypeInfo
                 break;
 
             case 3:   //  Windows.UI.Xaml.Controls.Page
-                xamlType = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 4:   //  Windows.UI.Xaml.Controls.UserControl
-                xamlType = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 5:   //  System.Collections.Generic.List`1<SDKTemplate.Scenario>
-                userType = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.CollectionAdd = VectorAdd_5_List;
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 6:   //  SDKTemplate.Scenario
-                userType = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.Activator = Activate_6_Scenario;
                 userType.AddMemberName("Title");
                 userType.AddMemberName("ClassType");
@@ -255,17 +255,17 @@ namespace SpeechToText.SpeechToTExt_XamlTypeInfo
                 break;
 
             case 7:   //  String
-                xamlType = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlSystemBaseType(typeName, type);
+                xamlType = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlSystemBaseType(typeName, type);
                 break;
 
             case 8:   //  System.Type
-                userType = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
+                userType = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Object"));
                 userType.SetIsReturnTypeStub();
                 xamlType = userType;
                 break;
 
             case 9:   //  SpeechAndTTS.PredefinedDictationGrammarScenario
-                userType = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_9_PredefinedDictationGrammarScenario;
                 userType.SetIsLocalType();
                 xamlType = userType;
@@ -303,26 +303,26 @@ namespace SpeechToText.SpeechToTExt_XamlTypeInfo
 
         private global::Windows.UI.Xaml.Markup.IXamlMember CreateXamlMember(string longMemberName)
         {
-            global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlMember xamlMember = null;
-            global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlUserType userType;
+            global::SpeechToText.SpeechToText_XamlTypeInfo.XamlMember xamlMember = null;
+            global::SpeechToText.SpeechToText_XamlTypeInfo.XamlUserType userType;
 
             switch (longMemberName)
             {
             case "SDKTemplate.MainPage.Scenarios":
-                userType = (global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SDKTemplate.MainPage");
-                xamlMember = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlMember(this, "Scenarios", "System.Collections.Generic.List`1<SDKTemplate.Scenario>");
+                userType = (global::SpeechToText.SpeechToText_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SDKTemplate.MainPage");
+                xamlMember = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlMember(this, "Scenarios", "System.Collections.Generic.List`1<SDKTemplate.Scenario>");
                 xamlMember.Getter = get_0_MainPage_Scenarios;
                 xamlMember.SetIsReadOnly();
                 break;
             case "SDKTemplate.Scenario.Title":
-                userType = (global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SDKTemplate.Scenario");
-                xamlMember = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlMember(this, "Title", "String");
+                userType = (global::SpeechToText.SpeechToText_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SDKTemplate.Scenario");
+                xamlMember = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlMember(this, "Title", "String");
                 xamlMember.Getter = get_1_Scenario_Title;
                 xamlMember.Setter = set_1_Scenario_Title;
                 break;
             case "SDKTemplate.Scenario.ClassType":
-                userType = (global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SDKTemplate.Scenario");
-                xamlMember = new global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlMember(this, "ClassType", "System.Type");
+                userType = (global::SpeechToText.SpeechToText_XamlTypeInfo.XamlUserType)GetXamlTypeByName("SDKTemplate.Scenario");
+                xamlMember = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlMember(this, "ClassType", "System.Type");
                 xamlMember.Getter = get_2_Scenario_ClassType;
                 xamlMember.Setter = set_2_Scenario_ClassType;
                 break;
@@ -380,9 +380,9 @@ namespace SpeechToText.SpeechToTExt_XamlTypeInfo
 
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.Windows.UI.Xaml.Build.Tasks"," 14.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    internal class XamlUserType : global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlSystemBaseType
+    internal class XamlUserType : global::SpeechToText.SpeechToText_XamlTypeInfo.XamlSystemBaseType
     {
-        global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::SpeechToText.SpeechToText_XamlTypeInfo.XamlTypeInfoProvider _provider;
         global::Windows.UI.Xaml.Markup.IXamlType _baseType;
         bool _isArray;
         bool _isMarkupExtension;
@@ -396,7 +396,7 @@ namespace SpeechToText.SpeechToTExt_XamlTypeInfo
         global::System.Collections.Generic.Dictionary<string, string> _memberNames;
         global::System.Collections.Generic.Dictionary<string, object> _enumValues;
 
-        public XamlUserType(global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
+        public XamlUserType(global::SpeechToText.SpeechToText_XamlTypeInfo.XamlTypeInfoProvider provider, string fullName, global::System.Type fullType, global::Windows.UI.Xaml.Markup.IXamlType baseType)
             :base(fullName, fullType)
         {
             _provider = provider;
@@ -588,7 +588,7 @@ namespace SpeechToText.SpeechToTExt_XamlTypeInfo
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     internal class XamlMember : global::Windows.UI.Xaml.Markup.IXamlMember
     {
-        global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlTypeInfoProvider _provider;
+        global::SpeechToText.SpeechToText_XamlTypeInfo.XamlTypeInfoProvider _provider;
         string _name;
         bool _isAttachable;
         bool _isDependencyProperty;
@@ -597,7 +597,7 @@ namespace SpeechToText.SpeechToTExt_XamlTypeInfo
         string _typeName;
         string _targetTypeName;
 
-        public XamlMember(global::SpeechToText.SpeechToTExt_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
+        public XamlMember(global::SpeechToText.SpeechToText_XamlTypeInfo.XamlTypeInfoProvider provider, string name, string typeName)
         {
             _name = name;
             _typeName = typeName;

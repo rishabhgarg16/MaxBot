@@ -225,8 +225,17 @@ namespace SpeechAndTTS
 
         private async void Start_Click(object sender, RoutedEventArgs e)
         {
-            Uri resourceUri;
+                      
             String strs = "https://api.projectoxford.ai/luis/v1/application?id=703dfe17-d565-490d-be00-910712691577&subscription-key=f43e1e3b89674540a272f41a042107e5&q=" + AddressField.Text;
+
+            responses(strs);
+            
+        }
+
+        public async void responses(String strs)
+        {
+
+            Uri resourceUri;
 
             // The value of 'AddressField' is set by the user and is therefore untrusted input. If we can't create a
             // valid, absolute URI, we'll notify the user about the incorrect input.
@@ -250,7 +259,72 @@ namespace SpeechAndTTS
                 await Helpers.DisplayTextResultAsync(response, OutputField, cts.Token);
 
                 r = await response.Content.ReadAsStringAsync();
-                responses(r);
+                s = r.ToString();
+                //Debug.WriteLine(s);
+
+                string[] seperatedWords = s.Split(' ');
+                int c = 0;
+                int d = 0;
+                string intent;
+                string entity;
+
+                foreach (string word in seperatedWords)
+                {
+                    c = c + 1;
+                    if (word == "\"intent\":" && d == 0)
+                    {
+                        intent = seperatedWords[c++];
+                        string str = "";
+                        int i;
+                        //Debug.WriteLine(intent.Length);
+                        for (i = 1; i < intent.Length; i++)
+                        {
+                            if (intent[i] == '"')
+                                break;
+
+                            //Debug.WriteLine(intent[i]);
+                            str = str + intent[i];
+                            //Debug.WriteLine(str);                            
+                        }
+                        //Debug.WriteLine(str);
+                        intent = str;
+                        Debug.WriteLine(intent);
+                        d = 1;
+                        break;
+                    }
+                }
+
+                c = 0;
+
+                foreach (string word in seperatedWords)
+                {
+                    c = c + 1;
+                    //Debug.WriteLine(word);
+                    //Debug.WriteLine(c);
+                    if (word == "\"entity\":")
+                    {
+                        entity = seperatedWords[c++];
+                        //Debug.WriteLine(entity);
+                        //Debug.WriteLine("Hi");
+                        string str1 = "";
+                        int i;
+                        //Debug.WriteLine(entity.Length);
+                        for (i = 1; i < entity.Length; i++)
+                        {
+                            //Debug.WriteLine(i);
+                            if (entity[i] == '"')
+                                break;
+
+                            //Debug.WriteLine(intent[i]);
+                            str1 = str1 + entity[i];
+                            //Debug.WriteLine(str1);                            
+                        }
+                        //Debug.WriteLine(str);
+                        entity = str1;
+                        Debug.WriteLine(entity);
+                        break;
+                    }
+                }
 
                 //rootPage.NotifyUser(
                 //        "Completed. Response came from " + response.Source + ". HTTP version used: " + response.Version.ToString() + ".",
@@ -268,133 +342,7 @@ namespace SpeechAndTTS
             {
                 Helpers.ScenarioCompleted(StartButton, CancelButton);
             }
-
-            //try
-            //{
-            //    if (ReadDefaultRadio.IsChecked.Value)
-            //    {
-            //        filter.CacheControl.ReadBehavior = HttpCacheReadBehavior.Default;
-            //    }
-            //    else if (ReadMostRecentRadio.IsChecked.Value)
-            //    {
-            //        filter.CacheControl.ReadBehavior = HttpCacheReadBehavior.MostRecent;
-            //    }
-            //    else if (ReadOnlyFromCacheRadio.IsChecked.Value)
-            //    {
-            //        filter.CacheControl.ReadBehavior = HttpCacheReadBehavior.OnlyFromCache;
-            //    }
-
-            //    if (WriteDefaultRadio.IsChecked.Value)
-            //    {
-            //        filter.CacheControl.WriteBehavior = HttpCacheWriteBehavior.Default;
-            //    }
-            //    else if (WriteNoCacheRadio.IsChecked.Value)
-            //    {
-            //        filter.CacheControl.WriteBehavior = HttpCacheWriteBehavior.NoCache;
-            //    }
-
-            //    // ---------------------------------------------------------------------------
-            //    // WARNING: Only test applications should ignore SSL errors.
-            //    // In real applications, ignoring server certificate errors can lead to MITM
-            //    // attacks (while the connection is secure, the server is not authenticated).
-            //    //
-            //    // The SetupServer script included with this sample creates a server certificate that is self-signed
-            //    // and issued to fabrikam.com, and hence we need to ignore these errors here. 
-            //    // ---------------------------------------------------------------------------
-            //    filter.IgnorableServerCertificateErrors.Add(ChainValidationResult.Untrusted);
-            //    filter.IgnorableServerCertificateErrors.Add(ChainValidationResult.InvalidName);
-
-            //    HttpResponseMessage response = await httpClient.GetAsync(resourceUri).AsTask(cts.Token);
-            //    isFilterUsed = true;
-
-            //    await Helpers.DisplayTextResultAsync(response, OutputField, cts.Token);
-
-            //    rootPage.NotifyUser(
-            //        "Completed. Response came from " + response.Source + ". HTTP version used: " + response.Version.ToString() + ".",
-            //        NotifyType.StatusMessage);
-            //}
-            //catch (TaskCanceledException)
-            //{
-            //    rootPage.NotifyUser("Request canceled.", NotifyType.ErrorMessage);
-            //}
-            //catch (Exception ex)
-            //{
-            //    rootPage.NotifyUser("Error: " + ex.Message, NotifyType.ErrorMessage);
-            //}
-            //finally
-            //{
-            //    Helpers.ScenarioCompleted(StartButton, CancelButton);
-            //}
-        }
-
-        public void responses(String r)
-        {
-            s = r.ToString();
-            //Debug.WriteLine(s);
-
-            string[] seperatedWords = s.Split(' ');
-            int c = 0;
-            int d = 0;
-            string intent;
-            string entity;
-
-            foreach (string word in seperatedWords)
-            {
-                c = c + 1;
-                if (word == "\"intent\":" && d == 0)
-                {
-                    intent = seperatedWords[c++];
-                    string str = "";
-                    int i;
-                    //Debug.WriteLine(intent.Length);
-                    for (i = 1; i < intent.Length; i++)
-                    {
-                        if (intent[i] == '"')
-                            break;
-
-                        //Debug.WriteLine(intent[i]);
-                        str = str + intent[i];
-                        //Debug.WriteLine(str);                            
-                    }
-                    //Debug.WriteLine(str);
-                    intent = str;
-                    Debug.WriteLine(intent);
-                    d = 1;
-                    break;
-                }
-            }
-
-            c = 0;
-
-            foreach (string word in seperatedWords)
-            {
-                c = c + 1;
-                //Debug.WriteLine(word);
-                //Debug.WriteLine(c);
-                if (word == "\"entity\":")
-                {
-                    entity = seperatedWords[c++];
-                    //Debug.WriteLine(entity);
-                    //Debug.WriteLine("Hi");
-                    string str1 = "";
-                    int i;
-                    //Debug.WriteLine(entity.Length);
-                    for (i = 1; i < entity.Length; i++)
-                    {
-                        //Debug.WriteLine(i);
-                        if (entity[i] == '"')
-                            break;
-
-                        //Debug.WriteLine(intent[i]);
-                        str1 = str1 + entity[i];
-                        //Debug.WriteLine(str1);                            
-                    }
-                    //Debug.WriteLine(str);
-                    entity = str1;
-                    Debug.WriteLine(entity);
-                    break;
-                }
-            }
+            
         }
 
         /// <summary>
@@ -527,9 +475,11 @@ namespace SpeechAndTTS
             {
                 recognitionOperation = speechRecognizer.RecognizeAsync();
                 SpeechRecognitionResult speechRecognitionResult = await recognitionOperation;
-                
-                responses(speechRecognitionResult.Text);
 
+                String str1 = "https://api.projectoxford.ai/luis/v1/application?id=703dfe17-d565-490d-be00-910712691577&subscription-key=f43e1e3b89674540a272f41a042107e5&q=" + speechRecognitionResult.Text;
+                responses(str1);
+
+   
                 // If successful, display the recognition result.
                 if (speechRecognitionResult.Status == SpeechRecognitionResultStatus.Success)
                 {

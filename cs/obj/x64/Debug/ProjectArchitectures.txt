@@ -1,1 +1,1 @@
-C:\Users\rishabh\Downloads\Windows-universal-samples-master\Windows-universal-samples-master\Samples\SpeechRecognitionAndSynthesis\cs\SpeechToTExt.csproj;x64
+C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\SpeechToText.csproj;x64
