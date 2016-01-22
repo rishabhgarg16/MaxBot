@@ -324,8 +324,9 @@ namespace SpeechAndTTS
                         Debug.WriteLine(entity);
                         break;
                     }
+                                      
                 }
-
+                //final_get(intent, entity);
                 //rootPage.NotifyUser(
                 //        "Completed. Response came from " + response.Source + ". HTTP version used: " + response.Version.ToString() + ".",
                 //        NotifyType.StatusMessage);
@@ -343,6 +344,44 @@ namespace SpeechAndTTS
                 Helpers.ScenarioCompleted(StartButton, CancelButton);
             }
             
+        }
+
+        void final_get(String intent, String entity)
+        {
+            String answer;
+            switch (intent)
+            {
+                case "startActivity":
+                    switch (entity)
+                    {
+                        case "lights":                            
+                            break;
+                        case "Music":
+                            break;
+                        case "bus":
+                            break;
+                        case "Mess":
+                            break;
+                        case "Joke":
+                            break;
+                        default: answer = "Either wrong intent/entity or the user input is still to be trained";
+                            break;
+                    }
+                    break;
+                case "stopActivity":
+                    switch (entity)
+                    {
+                        case "lights":
+                            break;
+                        case "Music":
+                            break;
+                        default: answer = "Either wrong intent/entity or the user input is still to be trained";
+                            break;
+                    }
+                    break;
+                default: answer = intent;
+                    break;
+            }
         }
 
         /// <summary>
@@ -478,7 +517,6 @@ namespace SpeechAndTTS
 
                 String str1 = "https://api.projectoxford.ai/luis/v1/application?id=703dfe17-d565-490d-be00-910712691577&subscription-key=f43e1e3b89674540a272f41a042107e5&q=" + speechRecognitionResult.Text;
                 responses(str1);
-
    
                 // If successful, display the recognition result.
                 if (speechRecognitionResult.Status == SpeechRecognitionResultStatus.Success)

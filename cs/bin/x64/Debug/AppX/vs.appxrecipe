@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-22T15:41:46.725</Modified>
+      <Modified>2016-01-22T17:40:58.231</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Debug\SpeechToText.exe">
       <PackagePath>entrypoint\SpeechToText.exe</PackagePath>
-      <Modified>2016-01-22T15:41:45.612</Modified>
+      <Modified>2016-01-22T17:40:54.151</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -528,11 +528,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-01-22T15:41:46.375</Modified>
+      <Modified>2016-01-22T17:40:57.410</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Debug\Core\SpeechToText.exe">
       <PackagePath>SpeechToText.exe</PackagePath>
-      <Modified>2016-01-22T15:41:46.722</Modified>
+      <Modified>2016-01-22T17:40:58.209</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
