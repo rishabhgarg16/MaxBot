@@ -102,6 +102,9 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Helpers.cs" />
+    <Compile Include="Output.xaml.cs">
+      <DependentUpon>Output.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PlugInFilter.cs" />
     <Compile Include="PredefinedDictationGrammarScenario.xaml.cs">
       <DependentUpon>PredefinedDictationGrammarScenario.xaml</DependentUpon>
@@ -126,6 +129,10 @@
       <Link>MainPage.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Output.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PredefinedDictationGrammarScenario.xaml">
       <Generator>MSBuild:Compile</Generator>

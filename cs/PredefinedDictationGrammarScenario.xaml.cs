@@ -11,6 +11,7 @@
 
 using SDKTemplate;
 using System;
+using Windows.Devices.SerialCommunication;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Windows.ApplicationModel.Resources.Core;
@@ -24,10 +25,15 @@ using Windows.UI.Xaml.Navigation;
 using Windows.Foundation;
 using Windows.Web.Http.Filters;
 using System.Threading;
-using System.Threading.Tasks;
+
 using Windows.Web.Http;
 using System.Diagnostics;
 using Windows.Security.Cryptography.Certificates;
+using System.IO;
+using System.Net;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
+using SpeechToText;
 
 namespace SpeechAndTTS
 {
@@ -72,7 +78,7 @@ namespace SpeechAndTTS
         {
             // Save the UI thread dispatcher to allow speech status messages to be shown on the UI.
             filter = new HttpBaseProtocolFilter();
-
+            filter.CacheControl.WriteBehavior = HttpCacheWriteBehavior.NoCache;
             httpClient = new HttpClient(filter);
             cts = new CancellationTokenSource();
             isFilterUsed = false;
@@ -228,11 +234,29 @@ namespace SpeechAndTTS
                       
             String strs = "https://api.projectoxford.ai/luis/v1/application?id=703dfe17-d565-490d-be00-910712691577&subscription-key=f43e1e3b89674540a272f41a042107e5&q=" + AddressField.Text;
 
-            responses(strs);
+            string result1=await responses(strs);
+            start_result.Visibility = result_TextBlock.Visibility = Visibility.Collapsed;
+            //hlOpenPrivacySettings.Visibility = Visibility.Collapsed;
+
+            //recognitionOperation = speechRecognizer.RecognizeWithUIAsync();
+            //SpeechRecognitionResult speechRecognitionResult = await recognitionOperation;
+            // If successful, display the recognition result.
+            //if (speechRecognitionResult.Status == SpeechRecognitionResultStatus.Success)
+            //{
+            start_result.Visibility = result_TextBlock.Visibility = Visibility.Visible;
+            //string result1 = await get_fortune();
+                    result_TextBlock.Text = result1;
+                //}
+                //else
+                //{
+                //    resultTextBlock.Visibility = Visibility.Visible;
+                //    resultTextBlock.Text = string.Format("Speech Recognition Failed, Status: {0}", speechRecognitionResult.Status.ToString());
+                //}
+            Debug.WriteLine("hi");
             
         }
 
-        public async void responses(String strs)
+        public async Task<string> responses(String strs)
         {
 
             Uri resourceUri;
@@ -242,7 +266,7 @@ namespace SpeechAndTTS
             if (!Helpers.TryGetUri(strs, out resourceUri))
             {
                 //rootPage.NotifyUser("Invalid URI.", NotifyType.ErrorMessage);
-                return;
+                return "Incorrect Input";
             }
 
             Helpers.ScenarioStarted(StartButton, CancelButton, OutputField);
@@ -265,78 +289,24 @@ namespace SpeechAndTTS
                 string[] seperatedWords = s.Split(' ');
                 int c = 0;
                 int d = 0;
-                string intent;
-                string entity;
-
-                foreach (string word in seperatedWords)
-                {
-                    c = c + 1;
-                    if (word == "\"intent\":" && d == 0)
-                    {
-                        intent = seperatedWords[c++];
-                        string str = "";
-                        int i;
-                        //Debug.WriteLine(intent.Length);
-                        for (i = 1; i < intent.Length; i++)
-                        {
-                            if (intent[i] == '"')
-                                break;
-
-                            //Debug.WriteLine(intent[i]);
-                            str = str + intent[i];
-                            //Debug.WriteLine(str);                            
-                        }
-                        //Debug.WriteLine(str);
-                        intent = str;
-                        Debug.WriteLine(intent);
-                        d = 1;
-                        break;
-                    }
-                }
-
-                c = 0;
-
-                foreach (string word in seperatedWords)
-                {
-                    c = c + 1;
-                    //Debug.WriteLine(word);
-                    //Debug.WriteLine(c);
-                    if (word == "\"entity\":")
-                    {
-                        entity = seperatedWords[c++];
-                        //Debug.WriteLine(entity);
-                        //Debug.WriteLine("Hi");
-                        string str1 = "";
-                        int i;
-                        //Debug.WriteLine(entity.Length);
-                        for (i = 1; i < entity.Length; i++)
-                        {
-                            //Debug.WriteLine(i);
-                            if (entity[i] == '"')
-                                break;
-
-                            //Debug.WriteLine(intent[i]);
-                            str1 = str1 + entity[i];
-                            //Debug.WriteLine(str1);                            
-                        }
-                        //Debug.WriteLine(str);
-                        entity = str1;
-                        Debug.WriteLine(entity);
-                        break;
-                    }
-                                      
-                }
-                //final_get(intent, entity);
+                string intent = "";
+                string entity = "";
+                intent = parser(seperatedWords, "intent");
+                entity = parser(seperatedWords, "type");
+                           
+                return await final_get(intent, entity);
                 //rootPage.NotifyUser(
                 //        "Completed. Response came from " + response.Source + ". HTTP version used: " + response.Version.ToString() + ".",
                 //        NotifyType.StatusMessage);
             }
             catch (TaskCanceledException)
             {
+                return "Notify user";
                 //rootPage.NotifyUser("Request canceled.", NotifyType.ErrorMessage);
             }
             catch (Exception ex)
             {
+                return "Notify User";
                 //rootPage.NotifyUser("Error is : " + ex.Message, NotifyType.ErrorMessage);
             }
             finally
@@ -346,43 +316,249 @@ namespace SpeechAndTTS
             
         }
 
-        void final_get(String intent, String entity)
+        async Task<string> final_get(String intent, String entity)
         {
+            Debug.WriteLine("in final_get");
             String answer;
             switch (intent)
             {
-                case "startActivity":
-                    switch (entity)
-                    {
-                        case "lights":                            
-                            break;
-                        case "Music":
-                            break;
-                        case "bus":
-                            break;
-                        case "Mess":
-                            break;
-                        case "Joke":
-                            break;
-                        default: answer = "Either wrong intent/entity or the user input is still to be trained";
-                            break;
-                    }
-                    break;
-                case "stopActivity":
+                case "StartActivity":
                     switch (entity)
                     {
                         case "lights":
+                            // SerialDevice serial
+                            return "lights";                                              
                             break;
-                        case "Music":
+                        case "fortune":
+                            return await get_fortune();
                             break;
-                        default: answer = "Either wrong intent/entity or the user input is still to be trained";
+                        case "music":
+                            return "Music";
+                            break;
+                        case "bus":
+                            //return get_bus_schedule();
+                            return "bus";
+                            break;
+                        case "mess":
+                            return "mess";
+                            //return get_messmenu();
+                            break;
+                        case "joke":
+                            return await get_joke();
+                            break;
+                        case "weather":
+                            //Debug.WriteLine("test");
+                            return await get_weather();
+                            break;
+                        default:
+                            answer = "Either wrong intent/entity or the user input is still to be trained";
+                            return answer;
                             break;
                     }
                     break;
-                default: answer = intent;
+                case "StopActivity":
+                    switch (entity)
+                    {
+                        case "lights":
+                            return "light";
+                            break;
+                        case "music":
+                            return "music";
+                            break;
+                        default:
+                            answer = "Either wrong intent/entity or the user input is still to be trained";
+                            return answer;
+                            break;
+                    }
+                    break;
+                default:
+                    answer = intent;
+                    return answer;
                     break;
             }
         }
+
+
+        public async Task<string> get_fortune()
+        {
+            Debug.WriteLine("in get_fortune");
+
+            //WebRequest req = WebRequest.Create("http://tambal.azurewebsites.net/joke/random");
+
+            //WebResponse rep = await req.GetResponseAsync();
+
+            Uri resourceUri;
+
+            string strs = "http://tambal.azurewebsites.net/joke/random";
+            // The value of 'AddressField' is set by the user and is therefore untrusted input. If we can't create a
+            // valid, absolute URI, we'll notify the user about the incorrect input.
+            if (!Helpers.TryGetUri(strs, out resourceUri))
+            {
+                //rootPage.NotifyUser("Invalid URI.", NotifyType.ErrorMessage);
+                return "Incorrect Input";
+            }
+
+            Helpers.ScenarioStarted(StartButton, CancelButton, OutputField);
+            //rootPage.NotifyUser("In progress", NotifyType.StatusMessage);
+
+
+            HttpResponseMessage response = await httpClient.GetAsync(resourceUri).AsTask(cts.Token);
+            isFilterUsed = true;
+
+            await Helpers.DisplayTextResultAsync(response, OutputField, cts.Token);
+
+            string r = await response.Content.ReadAsStringAsync();
+            string s = r.ToString();
+            Debug.WriteLine(s);
+
+            string json = response.Content.ToString();
+            var data = (JObject)JsonConvert.DeserializeObject(json);
+            string joke_data = data["joke"].Value<string>();
+
+            return(joke_data);
+            //Debug.WriteLine(joke_data);
+
+        }
+
+        public void get_messmenu()
+        {
+            this.Frame.Navigate(typeof(Output));
+        }
+
+        public void get_bus_schedule()
+        {
+            this.Frame.Navigate(typeof(Output));
+        }
+
+        public async Task<string> get_joke()
+        {
+
+            Debug.WriteLine("in get_joke");
+
+            //WebRequest req = WebRequest.Create("http://tambal.azurewebsites.net/joke/random");
+
+            //WebResponse rep = await req.GetResponseAsync();
+
+            Uri resourceUri;
+
+            string strs = "http://tambal.azurewebsites.net/joke/random";
+            // The value of 'AddressField' is set by the user and is therefore untrusted input. If we can't create a
+            // valid, absolute URI, we'll notify the user about the incorrect input.
+            if (!Helpers.TryGetUri(strs, out resourceUri))
+            {
+                //rootPage.NotifyUser("Invalid URI.", NotifyType.ErrorMessage);
+                return "Incorrect Input";
+            }
+
+            Helpers.ScenarioStarted(StartButton, CancelButton, OutputField);
+            //rootPage.NotifyUser("In progress", NotifyType.StatusMessage);
+
+
+            HttpResponseMessage response = await httpClient.GetAsync(resourceUri).AsTask(cts.Token);
+            isFilterUsed = true;
+
+            await Helpers.DisplayTextResultAsync(response, OutputField, cts.Token);
+
+            string r = await response.Content.ReadAsStringAsync();
+            string s = r.ToString();
+            Debug.WriteLine(s);
+
+            string json = response.Content.ToString();
+            var data = (JObject)JsonConvert.DeserializeObject(json);
+            string joke_data = data["joke"].Value<string>();
+
+            return joke_data;
+            //Debug.WriteLine(joke_data);
+
+            //Debug.WriteLine(rep);
+
+        }
+
+        public async Task<string> get_weather()
+        {
+
+            Debug.WriteLine("in get_weather");
+
+            Uri resourceUri;
+
+            string strs = "http://api.openweathermap.org/data/2.5/weather?q=jodhpur,in&appid=44db6a862fba0b067b1930da0d769e98";
+            // The value of 'AddressField' is set by the user and is therefore untrusted input. If we can't create a
+            // valid, absolute URI, we'll notify the user about the incorrect input.
+            if (!Helpers.TryGetUri(strs, out resourceUri))
+            {
+                //rootPage.NotifyUser("Invalid URI.", NotifyType.ErrorMessage);
+                return "Incorect Input";
+            }
+
+            Helpers.ScenarioStarted(StartButton, CancelButton, OutputField);
+            //rootPage.NotifyUser("In progress", NotifyType.StatusMessage);
+
+
+            HttpResponseMessage response = await httpClient.GetAsync(resourceUri).AsTask(cts.Token);
+            isFilterUsed = true;
+
+            await Helpers.DisplayTextResultAsync(response, OutputField, cts.Token);
+
+            string r = await response.Content.ReadAsStringAsync();
+            string s = r.ToString();
+            //Debug.WriteLine(s);
+
+            string[] seperatedwords = s.Split(',');
+
+            string des = parser(seperatedwords, "description");
+            string temp = parser(seperatedwords, "temp");
+            string hum = parser(seperatedwords, "humidity");
+            string wind  =  parser(seperatedwords, "speed");
+            string sunrise = parser(seperatedwords, "sunrise");
+            string sunset  = parser(seperatedwords, "sunset");
+
+            Debug.WriteLine(temp
+                );
+
+            // WHAT TO DISPLAY
+            return temp;
+
+
+
+        }
+
+
+        public string parser(string [] seperatedWords ,string key)
+        {
+
+            string intent = "";
+            int d = 0;
+            int c = 0;
+            foreach (string word in seperatedWords)
+            {
+                c = c + 1;
+                if (word == "\""+key+"\":" && d == 0)
+                {
+                    intent = seperatedWords[c++];
+                    string str = "";
+                    int i;
+                    //Debug.WriteLine(intent.Length);
+                    for (i = 1; i < intent.Length; i++)
+                    {
+                        if (intent[i] == '"')
+                            break;
+
+                        //Debug.WriteLine(intent[i]);
+                        str = str + intent[i];
+                        //Debug.WriteLine(str);                            
+                    }
+                    //Debug.WriteLine(str);
+                    intent = str;
+                    Debug.WriteLine(intent);
+                    d = 1;
+                    break;
+                }
+                
+            }
+
+            return intent;
+        }
+
 
         /// <summary>
         /// Initialize Speech Recognizer and compile constraints.
@@ -498,7 +674,8 @@ namespace SpeechAndTTS
         /// </summary>
         /// <param name="sender">Button that triggered this event</param>
         /// <param name="e">State information about the routed event</param>
-        private async void RecognizeWithoutUIDictationGrammar_Click(object sender, RoutedEventArgs e)
+            
+            private async void RecognizeWithoutUIDictationGrammar_Click(object sender, RoutedEventArgs e)
         {
             heardYouSayTextBlock.Visibility = resultTextBlock.Visibility = Visibility.Collapsed;
 
@@ -507,7 +684,7 @@ namespace SpeechAndTTS
             btnRecognizeWithoutUI.IsEnabled = false;
             cbLanguageSelection.IsEnabled = false;
             hlOpenPrivacySettings.Visibility = Visibility.Collapsed;
-            listenWithoutUIButtonText.Text = " listening for speech...";
+            //listenWithoutUIButtonText.Text = " listening for speech...";
 
             // Start recognition.
             try
@@ -553,7 +730,7 @@ namespace SpeechAndTTS
             }
 
             // Reset UI state.
-            listenWithoutUIButtonText.Text = " without UI";
+            //listenWithoutUIButtonText.Text = " without UI";
             cbLanguageSelection.IsEnabled = true;
             btnRecognizeWithUI.IsEnabled = true;
             btnRecognizeWithoutUI.IsEnabled = true;

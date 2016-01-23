@@ -132,7 +132,7 @@ namespace SpeechToText.SpeechToText_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[10];
+            _typeNameTable = new string[11];
             _typeNameTable[0] = "SDKTemplate.ScenarioBindingConverter";
             _typeNameTable[1] = "Object";
             _typeNameTable[2] = "SDKTemplate.MainPage";
@@ -142,9 +142,10 @@ namespace SpeechToText.SpeechToText_XamlTypeInfo
             _typeNameTable[6] = "SDKTemplate.Scenario";
             _typeNameTable[7] = "String";
             _typeNameTable[8] = "System.Type";
-            _typeNameTable[9] = "SpeechAndTTS.PredefinedDictationGrammarScenario";
+            _typeNameTable[9] = "SpeechToText.Output";
+            _typeNameTable[10] = "SpeechAndTTS.PredefinedDictationGrammarScenario";
 
-            _typeTable = new global::System.Type[10];
+            _typeTable = new global::System.Type[11];
             _typeTable[0] = typeof(global::SDKTemplate.ScenarioBindingConverter);
             _typeTable[1] = typeof(global::System.Object);
             _typeTable[2] = typeof(global::SDKTemplate.MainPage);
@@ -154,7 +155,8 @@ namespace SpeechToText.SpeechToText_XamlTypeInfo
             _typeTable[6] = typeof(global::SDKTemplate.Scenario);
             _typeTable[7] = typeof(global::System.String);
             _typeTable[8] = typeof(global::System.Type);
-            _typeTable[9] = typeof(global::SpeechAndTTS.PredefinedDictationGrammarScenario);
+            _typeTable[9] = typeof(global::SpeechToText.Output);
+            _typeTable[10] = typeof(global::SpeechAndTTS.PredefinedDictationGrammarScenario);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -193,7 +195,8 @@ namespace SpeechToText.SpeechToText_XamlTypeInfo
         private object Activate_2_MainPage() { return new global::SDKTemplate.MainPage(); }
         private object Activate_5_List() { return new global::System.Collections.Generic.List<global::SDKTemplate.Scenario>(); }
         private object Activate_6_Scenario() { return new global::SDKTemplate.Scenario(); }
-        private object Activate_9_PredefinedDictationGrammarScenario() { return new global::SpeechAndTTS.PredefinedDictationGrammarScenario(); }
+        private object Activate_9_Output() { return new global::SpeechToText.Output(); }
+        private object Activate_10_PredefinedDictationGrammarScenario() { return new global::SpeechAndTTS.PredefinedDictationGrammarScenario(); }
         private void VectorAdd_5_List(object instance, object item)
         {
             var collection = (global::System.Collections.Generic.ICollection<global::SDKTemplate.Scenario>)instance;
@@ -264,9 +267,16 @@ namespace SpeechToText.SpeechToText_XamlTypeInfo
                 xamlType = userType;
                 break;
 
-            case 9:   //  SpeechAndTTS.PredefinedDictationGrammarScenario
+            case 9:   //  SpeechToText.Output
                 userType = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
-                userType.Activator = Activate_9_PredefinedDictationGrammarScenario;
+                userType.Activator = Activate_9_Output;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 10:   //  SpeechAndTTS.PredefinedDictationGrammarScenario
+                userType = new global::SpeechToText.SpeechToText_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_10_PredefinedDictationGrammarScenario;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;
