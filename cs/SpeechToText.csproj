@@ -104,6 +104,7 @@
     <Compile Include="BusSchedule.xaml.cs">
       <DependentUpon>BusSchedule.xaml</DependentUpon>
     </Compile>
+    <Compile Include="bus_timetable.cs" />
     <Compile Include="Helpers.cs" />
     <Compile Include="Output.xaml.cs">
       <DependentUpon>Output.xaml</DependentUpon>

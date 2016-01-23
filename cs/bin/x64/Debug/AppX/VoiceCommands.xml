@@ -15,6 +15,18 @@
       <Feedback> Showing Bus TimeTable </Feedback>
       <Navigate />
     </Command>
+    
+    <Command Name="showMessMenu">
+      <Example> Show mess Menu </Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> what's in [the] menu</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> what's in [the] menu in {interval} on {day}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> what's in [the] {interval}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] [the] mess menu</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] mess menu </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] mess menu for {day}</ListenFor>     
+      <Feedback> Showing Mess Menu </Feedback>
+      <Navigate/>
+    </Command>
 
     <PhraseList Label="day">
       <Item>Monday</Item>
@@ -25,6 +37,12 @@
       <Item>Saturday</Item>
       <Item>Sunday</Item>
     </PhraseList>
+    
+    <PhraseList Label="interval">
+      <Item>breakfast</Item>
+      <Item>lunch</Item>
+      <Item>dinner</Item>
+    </PhraseList>  
 
   </CommandSet>
 </VoiceCommands>

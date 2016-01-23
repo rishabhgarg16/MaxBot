@@ -8,8 +8,16 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <Button x:ConnectionId='1' x:Name="button" Content="Button1" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="142,113,0,0"                     />
-        <Button x:ConnectionId='2' x:Name="button1" Content="Button2" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="144,174,0,0"                      />
+        <TextBox x:ConnectionId='1' x:Name="dayTxt" HorizontalAlignment="Left" Margin="89,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="83" Width="384" PlaceholderText="Enter Name" FontSize="33.333"/>
+
+        <TextBox x:ConnectionId='2' x:Name="timeTxt" HorizontalAlignment="Left" Margin="89,160,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="50" Width="384" PlaceholderText="Enter Email" FontSize="33.333"/>
+
+        <TextBox x:ConnectionId='3' x:Name="routeTxt" HorizontalAlignment="Left" Margin="89,200,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="50" Width="384" PlaceholderText="Enter Email" FontSize="33.333"/>
+
+        <Button x:ConnectionId='4' x:Name="button" Content="Insert" HorizontalAlignment="Left" Margin="109,294,0,0" VerticalAlignment="Top" Height="50" Width="135" FontSize="40"                         />
+
+        <Button x:ConnectionId='5' x:Name="button1" Content="Retrieve" HorizontalAlignment="Left" Margin="299,296,0,0" VerticalAlignment="Top" Height="50" Width="160" FontSize="40"                      />
+
 
     </Grid>
 </Page>
