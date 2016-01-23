@@ -173,18 +173,19 @@
       <RootMethod Name="SetBringIntoViewOnFocusChange" />
     </RootType>
     <RootType FullName="SDKTemplate.MainPage" />
-    <RootType FullName="SpeechToText.Output" />
     <RootType FullName="Windows.UI.Xaml.Controls.Button">
-      <RootProperty Name="IsEnabled" />
-      <RootProperty Name="Margin" />
-      <RootProperty Name="Height" />
-      <RootProperty Name="Width" />
       <RootProperty Name="Content" />
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="VerticalAlignment" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="IsEnabled" />
+      <RootProperty Name="Height" />
+      <RootProperty Name="Width" />
       <RootProperty Name="RenderTransformOrigin" />
       <RootEvent Name="Click" />
     </RootType>
+    <RootType FullName="SDKTemplate.BusSchedule" />
+    <RootType FullName="SpeechToText.Output" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="HorizontalAlignment" />
       <RootProperty Name="InputScope" />

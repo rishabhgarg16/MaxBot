@@ -366,6 +366,9 @@
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\shared\SRGS\zh-Hans-CN\SRGSColors.xml">
       <PackagePath>SRGS\zh-Hans-CN\SRGSColors.xml</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\VoiceCommands.xml">
+      <PackagePath>VoiceCommands.xml</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\SharedContent\media\microsoft-sdk.png">
       <PackagePath>Assets\microsoft-sdk.png</PackagePath>
     </AppxPackagedFile>

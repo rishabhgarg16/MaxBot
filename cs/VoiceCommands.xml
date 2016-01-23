@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="AdventureWorksCommandSet_en-us">
+    <AppName> Max </AppName>
+    <Example> Show Bus Schedule</Example>
+
+    <Command Name="showBusSchedule">
+      <Example> Show Bus Schedule</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus time table </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus schedule</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] timetable </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] timetable for {day}</ListenFor>
+     
+      <!--<ListenFor RequireAppName="ExplicitlySpecified"> show [my] {builtin:AppName} trip to {destination} </ListenFor>-->
+      <Feedback> Showing Bus TimeTable </Feedback>
+      <Navigate />
+    </Command>
+    
+    <Command Name="showBusSchedule">
+      <Example> Show Bus Schedule</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus time table </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus schedule</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] timetable </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] timetable for {day}</ListenFor>     
+      <Feedback> Showing Mess Menu</Feedback>
+      <Navigate />
+    </Command>
+
+    <PhraseList Label="day">
+      <Item>Monday</Item>
+      <Item>Tuesday</Item>
+      <Item>Wednesday</Item>
+      <Item>Thursday</Item>
+      <Item>Friday</Item>
+      <Item>Saturday</Item>
+      <Item>Sunday</Item>
+    </PhraseList>
+
+  </CommandSet>
+</VoiceCommands>

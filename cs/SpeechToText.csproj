@@ -101,6 +101,9 @@
       <Link>MainPage.xaml.cs</Link>
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="BusSchedule.xaml.cs">
+      <DependentUpon>BusSchedule.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Helpers.cs" />
     <Compile Include="Output.xaml.cs">
       <DependentUpon>Output.xaml</DependentUpon>
@@ -129,6 +132,10 @@
       <Link>MainPage.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BusSchedule.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Output.xaml">
       <SubType>Designer</SubType>
@@ -200,6 +207,7 @@
     <Content Include="..\shared\SRGS\zh-Hans-CN\SRGSColors.xml">
       <Link>SRGS\zh-Hans-CN\SRGSColors.xml</Link>
     </Content>
+    <Content Include="VoiceCommands.xml" />
   </ItemGroup>
   <ItemGroup>
     <PRIResource Include="..\shared\Strings\en-US\LocalizationSpeechResources.resw">
