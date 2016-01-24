@@ -1,0 +1,89 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<VoiceCommands xmlns="http://schemas.microsoft.com/voicecommands/1.2">
+  <CommandSet xml:lang="en-us" Name="MaxCommandSet_en-us">
+    <AppName> Max </AppName>
+    <Example> Show Bus Schedule</Example>
+
+    <Command Name="showBusSchedule">
+      <Example> Show Bus Time Table</Example>      
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus time table </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus schedule</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] {time} bus </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] timetable </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] timetable </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] timetable for {day}</ListenFor>
+      
+     
+      <!--<ListenFor RequireAppName="ExplicitlySpecified"> show [my] {builtin:AppName} trip to {destination} </ListenFor>-->
+      <Feedback> Showing Bus TimeTable </Feedback>
+      <Navigate />
+    </Command>
+    
+    <Command Name="showTimeTable">
+      <Example> Show Bus Time Table from college</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> show [me] bus time table from </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> show [me] bus time table from {source}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus time table to {destination} </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus schedule from {source}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus time table from {destination} to {source} </ListenFor>
+      <Feedback> Showing Time Table </Feedback>
+      <Navigate/>
+    </Command>
+    
+    <Command Name="showMessMenu">
+      <Example> Show mess Menu </Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> what's [in] [the] menu</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> what's in [the] menu {relativeDay} </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> what's in [the] menu in {interval} on {day}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> what's in [the] {interval}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] [the] mess menu</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] mess menu </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] mess menu for {day}</ListenFor>     
+      <Feedback> Please wait </Feedback>      
+      <Navigate/>
+    </Command>
+
+    <PhraseList Label="day">
+      <Item>Monday</Item>
+      <Item>Tuesday</Item>
+      <Item>Wednesday</Item>
+      <Item>Thursday</Item>
+      <Item>Friday</Item>
+      <Item>Saturday</Item>
+      <Item>Sunday</Item>
+    </PhraseList>
+    
+    <PhraseList Label="relativeDay">
+      <Item>today</Item>
+      <Item>tomorrow</Item>
+      <Item>day after tomorrow</Item>
+    </PhraseList>
+    
+    <PhraseList Label="interval">
+      <Item>breakfast</Item>
+      <Item>lunch</Item>
+      <Item>dinner</Item>
+    </PhraseList>
+
+    <PhraseList Label="time">
+      <Item>next</Item>      
+    </PhraseList>
+    
+  <PhraseList Label="destination">
+    <Item>IITJ</Item>
+    <Item>GPRA</Item>
+    <Item>hostel</Item>    
+    <Item>college</Item>
+  </PhraseList>
+    
+  <PhraseList Label="source">
+    <Item>IITJ</Item>
+    <Item>GPRA</Item>
+    <Item>hostel</Item>    
+    <Item>college</Item>
+    <Item>california</Item>
+  </PhraseList>
+
+  </CommandSet>
+</VoiceCommands>

@@ -406,6 +406,18 @@
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\SharedContent\media\windows-sdk.png">
       <PackagePath>Assets\windows-sdk.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\Assets\breakfast1.png">
+      <PackagePath>Assets\breakfast1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\Assets\bus1.png">
+      <PackagePath>Assets\bus1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\Assets\dinner1.png">
+      <PackagePath>Assets\dinner1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\Assets\lunch1.png">
+      <PackagePath>Assets\lunch1.png</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Debug\SpeechToText.xr.xml">
       <PackagePath>SpeechToText.xr.xml</PackagePath>
     </AppxPackagedFile>

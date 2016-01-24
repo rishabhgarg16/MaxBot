@@ -1,13 +1,3 @@
-//*********************************************************
-//
-// Copyright (c) Microsoft. All rights reserved.
-// This code is licensed under the MIT License (MIT).
-// THIS CODE IS PROVIDED *AS IS* WITHOUT WARRANTY OF
-// ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING ANY
-// IMPLIED WARRANTIES OF FITNESS FOR A PARTICULAR
-// PURPOSE, MERCHANTABILITY, OR NON-INFRINGEMENT.
-//
-//*********************************************************
 
 using System;
 using System.Collections.Generic;
@@ -18,11 +8,14 @@ namespace SDKTemplate
 {
     public partial class MainPage : Page
     {
-        public const string FEATURE_NAME = "Speech Recognition\nand TTS";
+        public const string FEATURE_NAME = "Cyborg";
 
         List<Scenario> scenarios = new List<Scenario>
         {
-            new Scenario() { Title="Predefined Dictation Grammar", ClassType=typeof(PredefinedDictationGrammarScenario)},
+            new Scenario() { Title="Cyborg", ClassType=typeof(PredefinedDictationGrammarScenario)},
+            new Scenario() { Title="About Us", ClassType=typeof(PredefinedDictationGrammarScenario)},
+            new Scenario() { Title="Help", ClassType=typeof(PredefinedDictationGrammarScenario)},
+            new Scenario() { Title="Developers", ClassType=typeof(PredefinedDictationGrammarScenario)},
           };
     }
 

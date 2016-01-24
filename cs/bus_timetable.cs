@@ -8,9 +8,9 @@ namespace SDKTemplate
 {
     public class bus_timetable
     {
-        public string id;
-        public string day;
-        public string route;
-        public string time;
+        public string id { get; set; }
+        public string day { get; set; }
+        public string route { get; set; }
+        public int time { get; set; }
     }
 }

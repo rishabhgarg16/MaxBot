@@ -10,7 +10,7 @@
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>6E46BD44-1DC4-4E9C-BF2F-57E4FC7A3F87</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\obj\x64\Debug\</IntermediateOutputPath>
-    <RegisteredManifestChecksum>640B61B86715035AB4FA6FFE99B885D5C143BFE0A1B54C7FDA5FC8025B7491D5</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>6D1798F5CD29A74463DF587A161E7B2BD567F4427F21F76ED5B024E2A5846509</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>Microsoft.SDKSamples.SpeechAndTTS.CS_1.0.0.0_x64__8wekyb3d8bbwe</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>Microsoft.SDKSamples.SpeechAndTTS.CS_8wekyb3d8bbwe!App</RegisteredUserModeAppID>
     <RegisteredPackageID>Microsoft.SDKSamples.SpeechAndTTS.CS</RegisteredPackageID>
@@ -22,13 +22,13 @@
     <AppXManifest Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-23T20:01:18.603</Modified>
+      <Modified>2016-01-24T10:38:45.784</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Debug\SpeechToText.exe">
       <PackagePath>entrypoint\SpeechToText.exe</PackagePath>
-      <Modified>2016-01-23T20:01:02.239</Modified>
+      <Modified>2016-01-24T10:38:44.244</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\.nuget\packages\Microsoft.CSharp\4.0.0\lib\netcore50\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -508,7 +508,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\VoiceCommands.xml">
       <PackagePath>VoiceCommands.xml</PackagePath>
-      <Modified>2016-01-23T18:06:02.547</Modified>
+      <Modified>2016-01-24T10:32:09.976</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\SharedContent\media\microsoft-sdk.png">
       <PackagePath>Assets\microsoft-sdk.png</PackagePath>
@@ -517,12 +517,12 @@
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\SharedContent\media\smalltile-sdk.png">
       <PackagePath>Assets\smallTile-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-20T15:15:37.000</Modified>
+      <Modified>2016-01-24T06:21:37.081</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\SharedContent\media\splash-sdk.png">
       <PackagePath>Assets\splash-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-20T15:15:37.000</Modified>
+      <Modified>2016-01-24T06:25:03.951</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\SharedContent\media\squaretile-sdk.png">
       <PackagePath>Assets\squareTile-sdk.png</PackagePath>
@@ -542,9 +542,25 @@
       <PackagePath>Assets\windows-sdk.png</PackagePath>
       <Modified>2016-01-20T15:15:37.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\Assets\breakfast1.png">
+      <PackagePath>Assets\breakfast1.png</PackagePath>
+      <Modified>2016-01-24T08:28:35.855</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\Assets\bus1.png">
+      <PackagePath>Assets\bus1.png</PackagePath>
+      <Modified>2016-01-24T09:33:09.581</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\Assets\dinner1.png">
+      <PackagePath>Assets\dinner1.png</PackagePath>
+      <Modified>2016-01-24T08:28:35.834</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\Assets\lunch1.png">
+      <PackagePath>Assets\lunch1.png</PackagePath>
+      <Modified>2016-01-24T08:28:35.844</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Debug\SpeechToText.xr.xml">
       <PackagePath>SpeechToText.xr.xml</PackagePath>
-      <Modified>2016-01-23T19:25:11.585</Modified>
+      <Modified>2016-01-24T10:38:43.907</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Windows Kits\10\UnionMetadata\Windows.winmd">
       <PackagePath>WinMetadata\Windows.winmd</PackagePath>
@@ -552,11 +568,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-01-23T20:01:07.526</Modified>
+      <Modified>2016-01-24T10:38:45.165</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Debug\Core\SpeechToText.exe">
       <PackagePath>SpeechToText.exe</PackagePath>
-      <Modified>2016-01-23T20:01:18.599</Modified>
+      <Modified>2016-01-24T10:38:45.780</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Microsoft.WindowsAzure.MobileServices;
 using Windows.UI.Popups;
+using System.Diagnostics;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=234238
 
@@ -39,7 +40,7 @@ namespace SDKTemplate
 
                 day = dayTxt.Text,
 
-                time = timeTxt.Text,
+                time = Int32.Parse(timeTxt.Text),
 
                 route = routeTxt.Text
 
@@ -60,22 +61,14 @@ namespace SDKTemplate
 
         private async void Retrive_Click(object sender, RoutedEventArgs e)
 
-        {
-
+        {            
             List<bus_timetable> allPersons = await App.MobileService.GetTable<bus_timetable>().ToListAsync();
-
             string res = "";
-
             foreach (bus_timetable b in allPersons)
-
             {
-
                 res += "\n\nDay :" + b.day + "\nroute :" + b.route + "\ntime :" + b.time;
-
             }
-
             var m1 = new MessageDialog(res).ShowAsync();
-
         }
 
     }

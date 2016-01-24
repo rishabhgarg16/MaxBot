@@ -1,0 +1,14 @@
+﻿<Page
+    x:Class="SDKTemplate.Output"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:SpeechToText"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Image x:Name="image" HorizontalAlignment="Left"  Source="http://cdn04.androidauthority.net/wp-content/uploads/2012/04/wo-mic-app-review-banner-image-120403.jpg" Height="100" VerticalAlignment="Top" Width="100"/>
+       
+    </Grid>
+</Page>

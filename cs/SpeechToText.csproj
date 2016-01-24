@@ -105,9 +105,16 @@
       <DependentUpon>BusSchedule.xaml</DependentUpon>
     </Compile>
     <Compile Include="bus_timetable.cs" />
+    <Compile Include="final.xaml.cs">
+      <DependentUpon>final.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Helpers.cs" />
-    <Compile Include="Output.xaml.cs">
-      <DependentUpon>Output.xaml</DependentUpon>
+    <Compile Include="MessResult.xaml.cs">
+      <DependentUpon>MessResult.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="mess_menu.cs" />
+    <Compile Include="AboutUs.xaml.cs">
+      <DependentUpon>AboutUs.xaml</DependentUpon>
     </Compile>
     <Compile Include="PlugInFilter.cs" />
     <Compile Include="PredefinedDictationGrammarScenario.xaml.cs">
@@ -115,6 +122,9 @@
     </Compile>
     <Compile Include="..\..\..\SharedContent\cs\AssemblyInfo.cs">
       <Link>Properties\AssemblyInfo.cs</Link>
+    </Compile>
+    <Compile Include="BusResult.xaml.cs">
+      <DependentUpon>BusResult.xaml</DependentUpon>
     </Compile>
     <Compile Include="SampleConfiguration.cs" />
   </ItemGroup>
@@ -138,7 +148,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Output.xaml">
+    <Page Include="final.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MessResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="AboutUs.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -150,6 +168,10 @@
       <Link>Styles\Styles.xaml</Link>
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="BusResult.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
@@ -208,7 +230,13 @@
     <Content Include="..\shared\SRGS\zh-Hans-CN\SRGSColors.xml">
       <Link>SRGS\zh-Hans-CN\SRGSColors.xml</Link>
     </Content>
-    <Content Include="VoiceCommands.xml" />
+    <Content Include="Assets\breakfast1.png" />
+    <Content Include="Assets\bus1.png" />
+    <Content Include="Assets\dinner1.png" />
+    <Content Include="Assets\lunch1.png" />
+    <Content Include="VoiceCommands.xml">
+      <SubType>Designer</SubType>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <PRIResource Include="..\shared\Strings\en-US\LocalizationSpeechResources.resw">
