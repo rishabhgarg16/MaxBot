@@ -53,7 +53,7 @@ show [me] [the] bus [time] [table] from {source}
 
 [please] show [me] [the] bus [time] [table] from {destination} to {source} 
 
-    
+
 For checking out what's in the menu!
 
 what's [in] [the] menu
@@ -77,6 +77,16 @@ what's in [the] menu on {day}
 * the words in [] are optional to say.
 
 *the definition for words in {} is mentioned in PhraseLists in VoiceCommand.xaml file
+
+For example you could say 
+
+what's in the menu
+
+what's in the menu today
+
+what's in the menu in breakfast on Sunday
+
+what's in the breakfast
 
 Awesome! Isn't it!
 
