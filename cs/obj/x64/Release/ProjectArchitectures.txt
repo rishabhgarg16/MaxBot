@@ -1,1 +1,1 @@
-C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\SpeechToText.csproj;x64
+C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\SpeechToText.csproj;x64

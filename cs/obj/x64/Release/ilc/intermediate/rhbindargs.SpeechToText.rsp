@@ -6,10 +6,10 @@
 "/nativelink:C:\Program Files (x86)\MSBuild\Microsoft\.NetNative\x64\ilc\lib\Native\vmath.lib"
 /customImports
 /methodBodyFolding
-"C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\obj\x64\Release\ilc\intermediate\MDIL\SpeechToText.mdilexe"
-"/i:C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\obj\x64\Release\ilc\intermediate\MDIL\"
-/out:"C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\obj\x64\Release\ilc\intermediate\Native\SpeechToText.exe"
-"/res:C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\obj\x64\Release\ilc\intermediate\Native.res"
+"C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\obj\x64\Release\ilc\intermediate\MDIL\SpeechToText.mdilexe"
+"/i:C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\obj\x64\Release\ilc\intermediate\MDIL\"
+/out:"C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\obj\x64\Release\ilc\intermediate\Native\SpeechToText.exe"
+"/res:C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\obj\x64\Release\ilc\intermediate\Native.res"
 "/i:C:\Program Files (x86)\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.NET.Native.Framework.1.2\1.2\x64\ret\MDIL"
 /shimexe
 /classlib:SharedLibrary

@@ -88,7 +88,7 @@ namespace SpeechAndTTS
                 speechResourceMap = ResourceManager.Current.MainResourceMap.GetSubtree("LocalizationSpeechResources");
 
                 PopulateLanguageDropdown();
-                await InitializeRecognizer(SpeechRecognizer.SystemSpeechLanguage);
+                //await InitializeRecognizer(SpeechRecognizer.SystemSpeechLanguage);
             }
             else
             {

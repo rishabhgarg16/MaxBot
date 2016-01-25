@@ -6,27 +6,29 @@
 
     <Command Name="showBusSchedule">
       <Example> Show Bus Time Table</Example>      
-      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus time table </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] [the] bus time table </ListenFor>
       <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus schedule</ListenFor>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] {time} bus </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] [the] {time} bus </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] [the] {time} bus from {source}</ListenFor>
       <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] [the] timetable </ListenFor>
       <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] timetable </ListenFor>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] timetable </ListenFor>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] timetable for {day}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] get [me] [the] next bus</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> {time} bus [please] </ListenFor>
       
-     
-      <!--<ListenFor RequireAppName="ExplicitlySpecified"> show [my] {builtin:AppName} trip to {destination} </ListenFor>-->
+      <ListenFor RequireAppName="ExplicitlySpecified"> hey {builtin:AppName} {time} bus [please] </ListenFor>
       <Feedback> Showing Bus TimeTable </Feedback>
       <Navigate />
     </Command>
     
     <Command Name="showTimeTable">
       <Example> Show Bus Time Table from college</Example>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase">  bus time table [for] {relativeDay} </ListenFor>
       <ListenFor RequireAppName="BeforeOrAfterPhrase"> show [me] bus time table from </ListenFor>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase"> show [me] bus time table from {source}</ListenFor>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus time table to {destination} </ListenFor>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus schedule from {source}</ListenFor>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] bus time table from {destination} to {source} </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> show [me] [the] bus [time] [table] from {source}</ListenFor>      
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] [the] bus time table to {destination} </ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] [the] bus from {source}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] [the] bus [time] [table] from {destination} to {source} </ListenFor>
       <Feedback> Showing Time Table </Feedback>
       <Navigate/>
     </Command>
@@ -37,10 +39,13 @@
       <ListenFor RequireAppName="BeforeOrAfterPhrase"> what's in [the] menu {relativeDay} </ListenFor>
       <ListenFor RequireAppName="BeforeOrAfterPhrase"> what's in [the] menu in {interval} on {day}</ListenFor>
       <ListenFor RequireAppName="BeforeOrAfterPhrase"> what's in [the] {interval}</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> what's in [the] menu on {day}</ListenFor>
       <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] [the] mess menu</ListenFor>
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] show [me] [the] {interval}</ListenFor>
       <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] mess menu </ListenFor>
-      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] mess menu for {day}</ListenFor>     
-      <Feedback> Please wait </Feedback>      
+      <ListenFor RequireAppName="BeforeOrAfterPhrase"> [please] fetch [me] mess menu for {day}</ListenFor>
+            
+      <Feedback> Please wait</Feedback>      
       <Navigate/>
     </Command>
 

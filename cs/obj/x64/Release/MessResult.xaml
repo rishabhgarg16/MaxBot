@@ -7,7 +7,30 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+    <Grid Background="#FFFFFFFF">
+        <ListView x:ConnectionId='1' x:Name="SongList" HorizontalAlignment="Left" Height="620" Margin="10,10,-146,0" VerticalAlignment="Top" Width="496" >
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Horizontal">
+                        <Image Height="60" Width="60"  Source="{Binding image}" />
+                        <StackPanel Padding="10,10,0,10" >
+                            <TextBlock Text="{Binding day}" FontFamily="Aleo" FontSize="18.667"  FontWeight="Bold" Foreground="Black"/>
+                            <TextBlock Text="{Binding type}" FontFamily="Aleo" FontSize="17.333" FontStyle="Italic" Foreground="Black" />
+                            <TextBlock Text="{Binding food}" FontFamily="Aleo" FontSize="17.333" FontStyle="Italic" Foreground="Black"/>
+                            <!--<TextBlock Text="{Binding image}" FontFamily="Aleo" FontSize="17.333" FontStyle="Italic" Foreground="Black"/>-->
+                            
+                            <!--<StackPanel Orientation="Horizontal">
+                            <Button Margin="2"  x:Name="youtube" Content="Youtube" HorizontalAlignment="Right" VerticalAlignment="Stretch" Click="youtube_Click" />
+                            <Button Margin="2" x:Name="Soundcloud" Content="SoundCloud" HorizontalAlignment="Right" VerticalAlignment="Stretch" Click="Soundcloud_Click"  />
+                        </StackPanel>-->
+                        </StackPanel>
+
+                    </StackPanel>
+                    
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
 
     </Grid>
 </Page>

@@ -1,97 +1,109 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-V3G5R73</Machine>
-    <WindowsUser>Anmol Singh</WindowsUser>
+    <Machine>DESKTOP-C05D461</Machine>
+    <WindowsUser>rishabh</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Release|x64</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>6E46BD44-1DC4-4E9C-BF2F-57E4FC7A3F87</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\obj\x64\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\obj\x64\Release\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\Assets\microsoft-sdk.png">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\breakfast1.png">
+      <PackagePath>Assets\breakfast1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\bus1.png">
+      <PackagePath>Assets\bus1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\dinner1.png">
+      <PackagePath>Assets\dinner1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\lunch1.png">
+      <PackagePath>Assets\lunch1.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\microsoft-sdk.png">
       <PackagePath>Assets\microsoft-sdk.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\Assets\smallTile-sdk.png">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\smallTile-sdk.png">
       <PackagePath>Assets\smallTile-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\Assets\splash-sdk.png">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\splash-sdk.png">
       <PackagePath>Assets\splash-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\Assets\squareTile-sdk.png">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\squareTile-sdk.png">
       <PackagePath>Assets\squareTile-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\Assets\storeLogo-sdk.png">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\storeLogo-sdk.png">
       <PackagePath>Assets\storeLogo-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\Assets\tile-sdk.png">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\tile-sdk.png">
       <PackagePath>Assets\tile-sdk.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\Assets\windows-sdk.png">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\windows-sdk.png">
       <PackagePath>Assets\windows-sdk.png</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\ClrCompression.dll">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\ClrCompression.dll">
       <PackagePath>ClrCompression.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\resources.pri">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SpeechToText.dll">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SpeechToText.dll">
       <PackagePath>SpeechToText.dll</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SpeechToText.exe">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SpeechToText.exe">
       <PackagePath>SpeechToText.exe</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\de-DE\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\de-DE\SRGSColors.xml">
       <PackagePath>SRGS\de-DE\SRGSColors.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\en-AU\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\en-AU\SRGSColors.xml">
       <PackagePath>SRGS\en-AU\SRGSColors.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\en-CA\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\en-CA\SRGSColors.xml">
       <PackagePath>SRGS\en-CA\SRGSColors.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\en-GB\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\en-GB\SRGSColors.xml">
       <PackagePath>SRGS\en-GB\SRGSColors.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\en-IN\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\en-IN\SRGSColors.xml">
       <PackagePath>SRGS\en-IN\SRGSColors.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\en-US\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\en-US\SRGSColors.xml">
       <PackagePath>SRGS\en-US\SRGSColors.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\es-ES\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\es-ES\SRGSColors.xml">
       <PackagePath>SRGS\es-ES\SRGSColors.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\fr-FR\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\fr-FR\SRGSColors.xml">
       <PackagePath>SRGS\fr-FR\SRGSColors.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\it-IT\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\it-IT\SRGSColors.xml">
       <PackagePath>SRGS\it-IT\SRGSColors.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\zh-Hans-CN\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\zh-Hans-CN\SRGSColors.xml">
       <PackagePath>SRGS\zh-Hans-CN\SRGSColors.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\VoiceCommands.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\VoiceCommands.xml">
       <PackagePath>VoiceCommands.xml</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\_Resources\0.rsrc">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\_Resources\0.rsrc">
       <PackagePath>_Resources\0.rsrc</PackagePath>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\_Resources\index.txt">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\_Resources\index.txt">
       <PackagePath>_Resources\index.txt</PackagePath>
     </AppxPackagedFile>
   </ItemGroup>

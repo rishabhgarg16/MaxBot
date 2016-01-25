@@ -1,72 +1,45 @@
-<!---
-  category: SpeechAndCortana 
-  samplefwlink: http://go.microsoft.com/fwlink/p/?LinkId=619897
---->
+This is Max! A bot for fetching bus schedules and mess menu of IIT Jodhpur!
 
-# Speech recognition and synthesis sample
+Requirements:
+Microsoft Visual Studio 2015
+Windows 10(tested it on windows enterprise)
 
-This sample demonstrates the usage of Speech Recognition and Speech Synthesis (Text-to-speech) within Universal Applications.
+Setup:
+Download two folders. One MaxBot and the other named SharedContent(available on my bitbucket account https://bitbucket.org/gargrishabh/sharedcontent/)
+1-Go to Visual Studio Diectory (C:\Users\rishabh\Documents\Visual Studio 2015)
+2-Copy the folder MaxBot to the Projects folder
+3-Replace the SharedContent folder with the downloaded folder
+4-Open SpeechToText solution file(C:\Users\rishabh\Documents\Visual Studio 2015\Projects\MaxBot\cs\SpeechToText)
+5-Build teh project
 
-Specifically, this sample covers the following scenarios:
+Congrats! The fun begins now! 
 
-1. Synthesizing text to speech (TTS)
-2. Synthesizing Speech Synthesis Markup Language (SSML)
-3. One-shot recognition using the predefined dictation grammar
-4. One-shot recognition using the predefined webs search grammar
-5. One-shot recognition using a custom list-based grammar
-6. One-shot recognition using a custom SRGS/GRXML grammar
-7. Continuous dictation
-8. Continuous recognition using a custom list-based grammar
-9. Continuous recognition using a custom SRGS/GRXML grammar
-10. Pausing and resuming continuous recognition 
+After buiding,open Cortana. You can give the following commands! (Available in VoiceCommands.xaml)
 
-In addition, translations are shown for speech recognition and text-to-speech for supported languages. Translations provided may not be using ideal phrasing and are provided for demonstration purposes only.
+[please] show [me] [the] bus time table 
+[please] show [me] bus schedule
+[please] show [me] [the] {time} bus 
+[please] show [me] [the] {time} bus from {source}
+[please] show [me] bus 
+[please] fetch [me] [the] timetable 
+[please] fetch [me] timetable 
+[please] get [me] [the] next bus
+{time} bus [please] 
 
-## Privacy Policy
+For checking out what's in the menu!
 
-Some speech recognition features require acceptance of the Microsoft Privacy Policy. Information about this privacy policy can be found in the Settings app, under Privacy -> Speech, Inking and Typing. You must view the privacy policy in order to accept it. To view the privacy policy, press the Privacy Policy link on the Speech, Inking and Typing settings page. 
+what's [in] [the] menu
+what's in [the] menu {relativeDay}
+what's in [the] menu in {interval} on {day}
+what's in [the] {interval}
+what's in [the] menu on {day}
+[please] show [me] [the] mess menu
+[please] show [me] [the] {interval}
+[please] fetch [me] mess menu
+[please] fetch [me] mess menu for {day}
 
-You can disable functionality that requires accepting this policy by turning off "Getting to know you" under Settings -> Privacy -> Speech, Inking and Typing. The samples will indicate to you if the privacy policy has not been accepted where necessary.
+Awesome! Isn't it!
 
-## Related topics
+And yes dont forget to wake Max before each command! Max is too lazy so do call out Max before each command!
 
--  [Speech recognition](https://msdn.microsoft.com/en-us/library/windows.media.speechrecognition.aspx)
--  [Speech synthesis](https://msdn.microsoft.com/en-us/library/windows/apps/windows.media.speechsynthesis.aspx)
--  [Speech design guidelines](https://msdn.microsoft.com/en-us/library/windows/apps/dn596121.aspx)
--  [Speech interactions](https://msdn.microsoft.com/library/windows/apps/mt185614)
--  [Responding to speech interactions (HTML)](https://msdn.microsoft.com/en-us/library/windows/apps/dn720491.aspx)
-
-## System requirements
-
-**Hardware:** Speech recognition requires an appropriate audio input device. 
-
-**Client:** Windows 10
-
-**Server:** Windows Server 2016 Technical Preview
-
-**Phone:** Windows 10
-
-## Build the sample
-
-1. If you download the samples ZIP, be sure to unzip the entire archive, not just the folder with the sample you want to build. 
-2. Start Microsoft Visual Studio 2015 and select **File** \> **Open** \> **Project/Solution**.
-3. Starting in the folder where you unzipped the samples, go to the Samples subfolder, then the subfolder for this specific sample, then the subfolder for your preferred language (C++, C#, or JavaScript). Double-click the Visual Studio 2015 Solution (.sln) file.
-4. Press Ctrl+Shift+B, or select **Build** \> **Build Solution**.
-
-## Run the sample
-
-The next steps depend on whether you just want to deploy the sample or you want to both deploy and run it.
-
-### Deploying the sample
-
-- Select Build > Deploy Solution. 
-
-### Deploying and running the sample
-
-- To debug the sample and then run it, press F5 or select Debug >  Start Debugging. To run the sample without debugging, press Ctrl+F5 or selectDebug > Start Without Debugging. 
-
-### Known Issues
-
- - The sample requires Media Player components to be available. If media player has been uninstalled, or when using an 'N' SKU of windows without media player components, the sample will not function. Note, however, that Speech Synthesis and Speech Recognition do not require media player directly, but other components of the samples do (Such as playback of synthesized text, or checking to see if a microphone is present and the app has permission to use it.) Developers should make sure their app is aware of it and handles this gracefully.
- 
- 
+If you face any problems do reach out to Anmol Priyanka Ankita or me! 

@@ -1,15 +1,15 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Machine>DESKTOP-V3G5R73</Machine>
-    <WindowsUser>Anmol Singh</WindowsUser>
+    <Machine>DESKTOP-C05D461</Machine>
+    <WindowsUser>rishabh</WindowsUser>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetOsVersion>10.0</TargetOsVersion>
     <TargetOsDescription>Windows 10.0</TargetOsDescription>
     <SolutionConfiguration>Release|x64</SolutionConfiguration>
     <PackageArchitecture>x64</PackageArchitecture>
     <PackageIdentityName>6E46BD44-1DC4-4E9C-BF2F-57E4FC7A3F87</PackageIdentityName>
-    <IntermediateOutputPath>C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\obj\x64\Release\</IntermediateOutputPath>
+    <IntermediateOutputPath>C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\obj\x64\Release\</IntermediateOutputPath>
     <RegisteredManifestChecksum>40669D44BB3C2C041DD8069E564194D8472DB4CD5A8157AA926A664D0908EF35</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>Microsoft.SDKSamples.SpeechAndTTS.CS_1.0.0.0_x64__8wekyb3d8bbwe</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>Microsoft.SDKSamples.SpeechAndTTS.CS_8wekyb3d8bbwe!App</RegisteredUserModeAppID>
@@ -19,112 +19,128 @@
     <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
   </PropertyGroup>
   <ItemGroup>
-    <AppXManifest Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\AppxManifest.xml">
+    <AppXManifest Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-24T06:44:49.843</Modified>
+      <Modified>2016-01-25T12:49:26.638</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\Assets\microsoft-sdk.png">
-      <PackagePath>Assets\microsoft-sdk.png</PackagePath>
-      <Modified>2016-01-20T15:15:37.000</Modified>
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\breakfast1.png">
+      <PackagePath>Assets\breakfast1.png</PackagePath>
+      <Modified>2016-01-25T12:02:37.547</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\Assets\smallTile-sdk.png">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\bus1.png">
+      <PackagePath>Assets\bus1.png</PackagePath>
+      <Modified>2016-01-25T12:02:37.549</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\dinner1.png">
+      <PackagePath>Assets\dinner1.png</PackagePath>
+      <Modified>2016-01-25T12:02:37.552</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\lunch1.png">
+      <PackagePath>Assets\lunch1.png</PackagePath>
+      <Modified>2016-01-25T12:02:37.555</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\microsoft-sdk.png">
+      <PackagePath>Assets\microsoft-sdk.png</PackagePath>
+      <Modified>2016-01-25T12:12:02.661</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\smallTile-sdk.png">
       <PackagePath>Assets\smallTile-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-24T06:21:37.081</Modified>
+      <Modified>2016-01-25T12:12:02.677</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\Assets\splash-sdk.png">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\splash-sdk.png">
       <PackagePath>Assets\splash-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-24T04:56:21.325</Modified>
+      <Modified>2016-01-25T12:12:02.677</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\Assets\squareTile-sdk.png">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\squareTile-sdk.png">
       <PackagePath>Assets\squareTile-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-20T15:15:37.000</Modified>
+      <Modified>2016-01-25T12:12:02.677</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\Assets\storeLogo-sdk.png">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\storeLogo-sdk.png">
       <PackagePath>Assets\storeLogo-sdk.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2016-01-20T15:15:37.000</Modified>
+      <Modified>2016-01-25T12:12:02.677</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\Assets\tile-sdk.png">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\tile-sdk.png">
       <PackagePath>Assets\tile-sdk.png</PackagePath>
-      <Modified>2016-01-20T15:15:37.000</Modified>
+      <Modified>2016-01-25T12:12:02.677</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\Assets\windows-sdk.png">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\Assets\windows-sdk.png">
       <PackagePath>Assets\windows-sdk.png</PackagePath>
-      <Modified>2016-01-20T15:15:37.000</Modified>
+      <Modified>2016-01-25T12:12:02.677</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\ClrCompression.dll">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\ClrCompression.dll">
       <PackagePath>ClrCompression.dll</PackagePath>
-      <Modified>2016-01-20T20:02:17.343</Modified>
+      <Modified>2016-01-16T06:36:46.150</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\resources.pri">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2016-01-24T06:43:40.307</Modified>
+      <Modified>2016-01-25T12:47:22.778</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SpeechToText.dll">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SpeechToText.dll">
       <PackagePath>SpeechToText.dll</PackagePath>
-      <Modified>2016-01-24T06:44:48.680</Modified>
+      <Modified>2016-01-25T12:49:24.418</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SpeechToText.exe">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SpeechToText.exe">
       <PackagePath>SpeechToText.exe</PackagePath>
-      <Modified>2016-01-24T06:44:49.682</Modified>
+      <Modified>2016-01-25T12:49:26.359</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\de-DE\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\de-DE\SRGSColors.xml">
       <PackagePath>SRGS\de-DE\SRGSColors.xml</PackagePath>
-      <Modified>2016-01-22T15:14:27.422</Modified>
+      <Modified>2016-01-25T12:03:03.718</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\en-AU\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\en-AU\SRGSColors.xml">
       <PackagePath>SRGS\en-AU\SRGSColors.xml</PackagePath>
-      <Modified>2016-01-22T15:14:27.422</Modified>
+      <Modified>2016-01-25T12:03:03.720</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\en-CA\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\en-CA\SRGSColors.xml">
       <PackagePath>SRGS\en-CA\SRGSColors.xml</PackagePath>
-      <Modified>2016-01-22T15:14:27.422</Modified>
+      <Modified>2016-01-25T12:03:03.721</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\en-GB\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\en-GB\SRGSColors.xml">
       <PackagePath>SRGS\en-GB\SRGSColors.xml</PackagePath>
-      <Modified>2016-01-22T15:14:27.422</Modified>
+      <Modified>2016-01-25T12:03:03.722</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\en-IN\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\en-IN\SRGSColors.xml">
       <PackagePath>SRGS\en-IN\SRGSColors.xml</PackagePath>
-      <Modified>2016-01-22T15:14:27.422</Modified>
+      <Modified>2016-01-25T12:03:03.751</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\en-US\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\en-US\SRGSColors.xml">
       <PackagePath>SRGS\en-US\SRGSColors.xml</PackagePath>
-      <Modified>2016-01-22T15:14:27.422</Modified>
+      <Modified>2016-01-25T12:03:03.753</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\es-ES\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\es-ES\SRGSColors.xml">
       <PackagePath>SRGS\es-ES\SRGSColors.xml</PackagePath>
-      <Modified>2016-01-22T15:14:27.422</Modified>
+      <Modified>2016-01-25T12:03:03.754</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\fr-FR\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\fr-FR\SRGSColors.xml">
       <PackagePath>SRGS\fr-FR\SRGSColors.xml</PackagePath>
-      <Modified>2016-01-22T15:14:27.422</Modified>
+      <Modified>2016-01-25T12:03:03.756</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\it-IT\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\it-IT\SRGSColors.xml">
       <PackagePath>SRGS\it-IT\SRGSColors.xml</PackagePath>
-      <Modified>2016-01-22T15:14:27.437</Modified>
+      <Modified>2016-01-25T12:03:03.758</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\SRGS\zh-Hans-CN\SRGSColors.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\SRGS\zh-Hans-CN\SRGSColors.xml">
       <PackagePath>SRGS\zh-Hans-CN\SRGSColors.xml</PackagePath>
-      <Modified>2016-01-22T15:14:27.437</Modified>
+      <Modified>2016-01-25T12:03:03.759</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\VoiceCommands.xml">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\VoiceCommands.xml">
       <PackagePath>VoiceCommands.xml</PackagePath>
-      <Modified>2016-01-24T06:47:08.885</Modified>
+      <Modified>2016-01-25T12:02:37.545</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\_Resources\0.rsrc">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\_Resources\0.rsrc">
       <PackagePath>_Resources\0.rsrc</PackagePath>
-      <Modified>2016-01-24T06:44:07.205</Modified>
+      <Modified>2016-01-25T12:48:31.606</Modified>
     </AppxPackagedFile>
-    <AppxPackagedFile Include="C:\Users\Anmol Singh\Documents\Visual Studio 2015\Projects\speechtoluis\cs\bin\x64\Release\ilc\_Resources\index.txt">
+    <AppxPackagedFile Include="C:\Users\rishabh\Documents\Visual Studio 2015\Projects\maxbot\cs\bin\x64\Release\ilc\_Resources\index.txt">
       <PackagePath>_Resources\index.txt</PackagePath>
-      <Modified>2016-01-24T06:44:07.208</Modified>
+      <Modified>2016-01-25T12:48:31.607</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
